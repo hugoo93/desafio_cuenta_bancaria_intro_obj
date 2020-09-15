@@ -9,17 +9,18 @@ class Carta
     end
 end
 
-arregloCartas = ["","","","",""]
+arregloCartas = []
 
 for i in 0..4
     
-    numero_TEMP = [rand(13)].to_s
+    numero_TEMP = rand(13)
     arreglopinta_TEMP = ["C","D","T","E"]
     pinta_TEMP = arreglopinta_TEMP.sample
 
     crt = Carta.new(numero_TEMP,pinta_TEMP)
 
-    arregloCartas.insert(i,crt)
+    arregloCartas.push(crt)
 end
 
-puts arregloCartas
+print arregloCartas
+puts
